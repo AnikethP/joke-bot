@@ -4,7 +4,7 @@ import requests
 import json
 import time
 
-TOKEN = 'OTM4NTg3OTU3NzkzODAwMzAz.YfseJw.ZyXyC7XkGpiJBshvdPktrgqN7eo'
+TOKEN = 'OTM4NTg3OTU3NzkzODAwMzAz.YfseJw.2mj-EQ0ynLBX95O1wSSAJcRERQc'
 
 client = discord.Client()
 channel = None
@@ -34,6 +34,8 @@ async def getJoke():
         # Print the type of data variable
         num =  random.randrange(0, len(data))
         #for server logging purposes
+        if len(data[num]['body']) == 0:
+            getJoke()
         print(f"Sent message: {data[num]['body']}")
         await send_message(data[num]['body'])
 
