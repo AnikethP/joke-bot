@@ -4,7 +4,7 @@ import requests
 import json
 import time
 
-TOKEN = 'OTM4NTg3OTU3NzkzODAwMzAz.YfseJw.2mj-EQ0ynLBX95O1wSSAJcRERQc'
+TOKEN = "Insert Token"
 
 client = discord.Client()
 channel = None
